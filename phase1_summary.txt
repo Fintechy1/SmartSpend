@@ -1,0 +1,37 @@
+SmartSpend – Phase 1 Summary
+=============================
+
+Dataset Overview
+----------------
+The dataset was loaded from credit_card_transactions.csv and consists of 1296641 records and 29 features. All columns were reviewed for completeness and data quality.
+
+Data Cleaning
+-------------
+During the cleaning process, 0 duplicate records were removed and 0 invalid amount records were filtered out. 34 unrealistic amount records were removed (amounts below $0.01 or above $10,000). Missing values were imputed using the mean for numeric columns and the mode for categorical columns. The final cleaned dataset contains 1296641 valid records.
+
+Feature Engineering
+-------------------
+The following features were added: Month, Year, DayOfWeek, and IsWeekend. The data spans from 2019-01 to 2020-06. Approximately 34.8% of transactions occurred on weekends and 65.2% occurred on weekdays.
+
+Amount Statistics
+-----------------
+After cleaning, the transaction amount column has the following distribution: Minimum: $1.00, Maximum: $9999.39, Mean: $69.96, Standard Deviation: $138.42.
+
+Exploratory Data Analysis
+-------------------------
+The dataset contains 1296641 total transactions with a total spend of $90714213.73. The average transaction amount is $69.96. The data covers the period from 2019-01-01 to 2020-06-21.
+The top spending category is Grocery_Pos with a total of $14460822.38.
+The highest spending month was 2019-12 at $9850417.33 and the lowest was 2020-02 at $3345131.24.
+The average monthly spending is $5039678.54.
+The estimated daily burn rate is $168613.78 and the estimated monthly burn rate is $5058413.41.
+Weekend transactions have a higher average spend than weekday transactions: No.
+
+Visualizations Generated
+------------------------
+The following charts were saved to the charts/ folder:
+- category_bar.png
+- category_pie.png
+- monthly_trend.png
+- day_of_week.png
+- top_merchants.png
+- daily_spending.png
